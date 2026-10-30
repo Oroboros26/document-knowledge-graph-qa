@@ -1,0 +1,5 @@
+{"id": "q1", "hops": 1, "question": "Who operates the Brno Plant?", "gold": ["Kestrel Textiles s.r.o."]}
+{"id": "q2", "hops": 2, "question": "Which materials are affected by finding F-12?", "gold": ["Ripstop-40"]}
+{"id": "q3", "hops": 3, "question": "Which products are affected by finding F-12?", "gold": ["Alpine Shell Jacket", "Trail Pack 28"]}
+{"id": "q4", "hops": 3, "question": "Which company supplies the material used in the Alpine Shell Jacket?", "gold": ["Kestrel Textiles s.r.o."]}
+{"id": "q5", "hops": 3, "question": "Is the Summit Glove affected by any audit finding?", "gold": ["No"]}

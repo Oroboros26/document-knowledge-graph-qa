@@ -1,0 +1,10 @@
+services:
+  neo4j:
+    image: neo4j:5
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD}
+    ports: ["7474:7474", "7687:7687"]
+    volumes: [neo4j_data:/data]
+  # Limitation: Airflow + Streamlit services added when the DAG and UI are built
+volumes:
+  neo4j_data:

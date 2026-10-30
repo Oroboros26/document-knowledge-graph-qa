@@ -1,0 +1,25 @@
+{
+  "_note": "Synthetic output of the extract + resolve stages for the 3 sample docs. Illustrative, not produced by a real run.",
+  "entities": [
+    {"id": "org:aurora-gear", "name": "Aurora Gear AG", "type": "Organization", "aliases": ["Aurora"]},
+    {"id": "org:kestrel", "name": "Kestrel Textiles s.r.o.", "type": "Organization", "aliases": ["Kestrel", "KT"]},
+    {"id": "fac:brno", "name": "Brno Plant", "type": "Facility", "aliases": ["Kestrel Brno site"]},
+    {"id": "mat:ripstop-40", "name": "Ripstop-40", "type": "Material", "aliases": ["Ripstop-40 fabric"]},
+    {"id": "mat:cordura-500", "name": "Cordura-500", "type": "Material", "aliases": []},
+    {"id": "find:f-12", "name": "Finding F-12", "type": "Finding", "aliases": ["F-12"]},
+    {"id": "prod:alpine-shell", "name": "Alpine Shell Jacket", "type": "Product", "aliases": []},
+    {"id": "prod:trail-pack-28", "name": "Trail Pack 28", "type": "Product", "aliases": []},
+    {"id": "prod:summit-glove", "name": "Summit Glove", "type": "Product", "aliases": []}
+  ],
+  "edges": [
+    {"src": "org:kestrel", "rel": "SUPPLIES", "dst": "org:aurora-gear", "doc": "supplier_agreement.md", "page": 2, "chunk_id": "sa-014-c02", "conf": 0.97},
+    {"src": "org:kestrel", "rel": "OPERATES", "dst": "fac:brno", "doc": "supplier_agreement.md", "page": 2, "chunk_id": "sa-014-c02", "conf": 0.95},
+    {"src": "fac:brno", "rel": "PRODUCES", "dst": "mat:ripstop-40", "doc": "supplier_agreement.md", "page": 2, "chunk_id": "sa-014-c02", "conf": 0.93},
+    {"src": "find:f-12", "rel": "FOUND_AT", "dst": "fac:brno", "doc": "audit_report.md", "page": 2, "chunk_id": "qa-03-c03", "conf": 0.94},
+    {"src": "find:f-12", "rel": "AFFECTS", "dst": "mat:ripstop-40", "doc": "audit_report.md", "page": 2, "chunk_id": "qa-03-c03", "conf": 0.91},
+    {"src": "prod:alpine-shell", "rel": "USES", "dst": "mat:ripstop-40", "doc": "product_spec.md", "page": 1, "chunk_id": "ps-26-c01", "conf": 0.96},
+    {"src": "prod:trail-pack-28", "rel": "USES", "dst": "mat:ripstop-40", "doc": "product_spec.md", "page": 2, "chunk_id": "ps-26-c02", "conf": 0.95},
+    {"src": "prod:trail-pack-28", "rel": "USES", "dst": "mat:cordura-500", "doc": "product_spec.md", "page": 2, "chunk_id": "ps-26-c02", "conf": 0.95},
+    {"src": "prod:summit-glove", "rel": "USES", "dst": "mat:cordura-500", "doc": "product_spec.md", "page": 3, "chunk_id": "ps-26-c03", "conf": 0.96}
+  ]
+}

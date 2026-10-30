@@ -1,0 +1,24 @@
+[project]
+name = "document-knowledge-graph-qa"
+version = "0.1.0"
+description = "Early skeleton for a document knowledge graph with provenance-tracked edges and a read-only Cypher guard"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2"]
+
+[project.optional-dependencies]
+# needed once extraction, loading, querying and the UI are built
+app = ["neo4j", "anthropic", "streamlit", "pyvis"]
+dev = ["pytest", "ruff"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110
